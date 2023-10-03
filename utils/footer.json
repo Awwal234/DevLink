@@ -1,0 +1,38 @@
+[
+    {
+        "name": "About",
+        "link": "/about"
+    },
+    {
+        "name": "Features",
+        "link": "/about"
+    },
+    {
+        "name": "Processes",
+        "link": "/processes"
+    },
+    {
+        "name": "Instagram",
+        "link": "https://instagram.com/"
+    },
+    {
+        "name": "Linkedin",
+        "link": "https://linkedin.com/"
+    },
+    {
+        "name": "Twitter",
+        "link": "https://twitter.com/"
+    },
+    {
+        "name": "Terms & Conditions",
+        "link": "/t&c"
+    },
+    {
+        "name": "Privacy Policy",
+        "link": "/privacy_policy"
+    },
+    {
+        "name": "Cookies",
+        "link": "/cookies_policy"
+    }
+]
