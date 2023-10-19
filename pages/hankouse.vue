@@ -2,12 +2,16 @@
 const hanko = useHanko();
 const router = useRouter();
 function afterLogin() {
-  router.push("/customize_link");
+  navigateTo("/customize_link");
+  localStorage.setItem("isLogged", true);
+  localStorage.setItem("hanko_login", true);
 }
 function gotoLogin() {
-  router.push("/");
+  navigateTo("/");
   localStorage.removeItem("hanko");
   localStorage.removeItem("hanko_session");
+  localStorage.setItem("isLogged", false);
+  localStorage.setItem("hanko_login", false);
 }
 function session() {
   console.log("session created");
@@ -27,11 +31,12 @@ function session() {
       >
         Back to Editor
       </div>
-      <hanko-auth id="hankoAuth" />
-      <hanko-event
-        @onAuthFlowCompleted="afterLogin()"
+      <hanko-auth
         @onSessionCreated="session()"
+        @onAuthFlowCompleted="afterLogin()"
+        id="hankoAuth"
       />
+      <hanko-event />
     </div>
   </main>
 </template>
