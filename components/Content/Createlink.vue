@@ -22,7 +22,7 @@ function printPlatform(e: any) {
 const inp2 = ref(false);
 function checkLoggedUser() {
   const checkuser = localStorage.getItem("isLogged");
-  if (checkuser === null || checkuser === undefined || checkuser === false) {
+  if (checkuser === null || checkuser === undefined || checkuser === false || checkuser === 'false') {
     router.push("/");
   } else {
     console.log("okay user logged in");
